@@ -6,10 +6,13 @@ const categories = require("./server/route/categories");
 const products = require("./server/route/products");
 const order = require("./server/route/order");
 const session = require("express-session");
+const con = require("./server/mogoose_seed");
 
 let app = express();
 
 let port = 3000;
+
+con.con();
 
 mongoose.connect("mongodb://localhost/shop_varin");
 app.use("/server", express.static("uploads"));

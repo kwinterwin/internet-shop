@@ -2,8 +2,6 @@ const users = require ("../models/users");
 
 let usersData = {
 
-	
-
 	login: function(req, res){
 		let user = {};
 		user.email = req.body.user;
